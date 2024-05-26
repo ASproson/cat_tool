@@ -6,9 +6,9 @@ Implementation of the unix cat functionality using NodeJS. `cat` in unix allows 
 
 Please clone the repo below:
 
-When in the repo directory you can run the following commands on the test files:
-
 > `https://github.com/ASproson/cat_tool.git`
+
+When in the repo directory you can run the following commands on the test files:
 
 > `node main.js readline test.txt`
 
