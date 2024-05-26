@@ -14,8 +14,6 @@ When in the repo directory you can run the following commands on the test files:
 
 > `node main.js cat test.txt test2.txt`
 
-> `node main.js cat test.txt test2.txt`
-
 > `node main.js cat test.txt | head -n3`
 
 > `node main.js number test.txt`
@@ -30,5 +28,4 @@ When in the repo directory you can run the following commands on the test files:
 
 ## Demo
 
-
-
+![Animation2](https://github.com/ASproson/cat_tool/assets/77736272/e603ecb1-556a-41c4-ae3e-eba0d1634517)
