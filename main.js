@@ -1,11 +1,11 @@
-import fs from "fs";
-import readline from "readline";
+const fs = require("fs");
+const readline = require("readline");
 
 /**
  * Reads contents of file from the passed file path and prints them out
  * @param {*} filePath
  */
-export function readFromFile(filePath) {
+function readFromFile(filePath) {
   readline.createInterface({
     input: fs.createReadStream(filePath),
     output: process.stdout,
@@ -16,7 +16,7 @@ export function readFromFile(filePath) {
  * Accepts an array of file paths and concatenates the result
  * @param {*} filePaths
  */
-export function concatenateFiles(filePaths) {
+function concatenateFiles(filePaths) {
   filePaths.forEach((path) => {
     fs.readFile(path, "utf-8", (err, data) => {
       if (err) {
@@ -32,7 +32,7 @@ export function concatenateFiles(filePaths) {
  * Output file at filepath with numbered lines
  * @param {*} filePath
  */
-export function numberLines(filePath, includeBlankLines) {
+function numberLines(filePath, includeBlankLines) {
   fs.readFile(filePath, "utf-8", (err, data) => {
     if (err) {
       console.log("Error reading file: ", err);
@@ -93,6 +93,8 @@ function main() {
 }
 
 main();
+
+module.exports = { readFromFile, concatenateFiles, numberLines };
 
 // node main.js readline test.txt
 // node main.js cat test.txt test2.txt
