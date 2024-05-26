@@ -5,7 +5,7 @@ import readline from "readline";
  * Reads contents of file from the passed file path and prints them out
  * @param {*} filePath
  */
-function readFromFile(filePath) {
+export function readFromFile(filePath) {
   readline.createInterface({
     input: fs.createReadStream(filePath),
     output: process.stdout,
@@ -16,7 +16,7 @@ function readFromFile(filePath) {
  * Accepts an array of file paths and concatenates the result
  * @param {*} filePaths
  */
-function concatenateFiles(filePaths) {
+export function concatenateFiles(filePaths) {
   filePaths.forEach((path) => {
     fs.readFile(path, "utf-8", (err, data) => {
       if (err) {
@@ -32,7 +32,7 @@ function concatenateFiles(filePaths) {
  * Output file at filepath with numbered lines
  * @param {*} filePath
  */
-function numberLines(filePath, includeBlankLines) {
+export function numberLines(filePath, includeBlankLines) {
   fs.readFile(filePath, "utf-8", (err, data) => {
     if (err) {
       console.log("Error reading file: ", err);
